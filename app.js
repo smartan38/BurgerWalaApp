@@ -18,12 +18,12 @@ dotenv.config({
     secret :"gmgjhgbcjhgcknvjkhmnjkb",
     resave : false,
     saveUninitialized :false,
-//     cookie:{
-//       secure : true,
-//       httpOnly : true,
-//       sameSite : "none",
+    cookie:{
+      secure : true,
+      httpOnly : true,
+      sameSite : "none",
 
-//     },
+    },
   }))
   app.use(cookieParser())
   app.use(express.json())
