@@ -9,10 +9,12 @@ const router=express.Router();
 router.get("/googlelogin",passport.authenticate("google",{
     scope : ["profile"],
 }))
-router.get("/login" , passport.authenticate("google" ,{
-       scope : ["profile"],
-    successRedirect : process.env.FRONTEND_URL,
-})  
+router.get("/login" , passport.authenticate("google" ,
+                                            {
+       
+    successRedirect :"http://localhost:3000" ,
+}
+)  
 
 )
 router.get("/me",isAuthenticated,myProfile)
