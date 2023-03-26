@@ -5,7 +5,7 @@ import session from "express-session"
 import cookieParser from "cookie-parser";
 import passport from "passport";
 import { errorMiddleware } from "./middlewares/errorMiddleware.js";
-// import cors from "cors";
+import cors from "cors";
 
 const app = express(); 
 export default app;
@@ -31,17 +31,17 @@ dotenv.config({
     extended :true,
   }))
 
-//   app.use(cors({
-//     credentials:true,
-//     origin :process.env.FRONTEND_URL,
-//     methods :["GET","POST","PUT","DELETE"],
+  app.use(cors({
+    credentials:true,
+    origin :process.env.FRONTEND_URL,
+    methods :["GET","POST","PUT","DELETE"],
 
-//   }))
+  }))
  
   app.use(passport.authenticate("session"))
   app.use(passport.initialize())
   app.use(passport.session())
-  // app.enable("trust proxy")
+  app.enable("trust proxy")
 connectPassport()
 
 // importing routes
