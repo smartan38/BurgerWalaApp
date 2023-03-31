@@ -18,11 +18,7 @@ router.post("/contact",(req,res,next)=>{
     name : req.body.name,
     email :req.body.email,
     message : req.body.message})
-  feedback.save();
-     .then(data =>{
-        res.json(data)
-    }).catch(err=>{
-        res.json(err)
-    })
+  feedback.save()
+  
 })
 export default router;
