@@ -1,9 +1,20 @@
   import { asyncError } from "../middlewares/errorMiddleware.js"
-import {Order} from "../models/order.js"
+import {Order } from "../models/order.js"
+import {Contact } from "../models/User.js"
 import {Payment} from "../models/Payment.js"
 import ErrorHandler from "../utils/ErrorHandler.js";
 import {instance} from "../server.js"
 
+export const placeContact = asyncError(async(req,res,next)=>{
+  const { name ,email, message,} =req.body;
+  const feedback ={name , email ,message,}
+  await Contact.create(feedback)
+  
+      res.status(200).json({
+        success : true,
+        message :"Order placed successfully via COD"
+    })
+})
 export const placeOrder= asyncError(async (req,res,next)=>{
     const {
         shippingInfo,
