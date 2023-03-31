@@ -23,7 +23,7 @@ const schema=new mongoose.Schema({
 
 export const User = mongoose.model("User",schema)
 
-const schema = new mongoose.Schema({
+const schema1 = new mongoose.Schema({
     name :{
         type: String,
         require : true,
@@ -38,7 +38,7 @@ const schema = new mongoose.Schema({
     }
 })
 
-export const Contact =mongoose.model("Contact",schema)
+export const Contact =mongoose.model("Contact",schema1)
         
     
     
