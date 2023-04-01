@@ -1,6 +1,23 @@
 import mongoose from "mongoose";
 import { User } from "./User.js";
 
+const schema1 = new mongoose.Schema({
+    name :{
+        type: String,
+        require : true,
+    },
+    email :{
+      type : String,
+      require : true,
+},
+    message : {
+        type : String ,
+        require : true,
+    },
+})
+
+export const Contact =mongoose.model("Contact",schema1);
+
 const schema = new mongoose.Schema({
     shippingInfo :{
         hNo :{
