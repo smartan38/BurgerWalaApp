@@ -12,7 +12,7 @@ router.get("/googlelogin",passport.authenticate("google",{
 router.get("/login" , passport.authenticate("google" ,
                                             {
        
-    successRedirect :"http://localhost:3000",
+    successRedirect :process.env.FRONTEND_URL,
 }
 )  
 
