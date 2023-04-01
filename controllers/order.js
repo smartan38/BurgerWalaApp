@@ -5,12 +5,12 @@ import ErrorHandler from "../utils/ErrorHandler.js";
 import {instance} from "../server.js"
 
 export const placeContact = asyncError(async(req,res,next)=>{
-  const contact = new Contact({
-    name :req.body.name,
-    email : req.body.email,
-    mesage : req.body.message})
-  const feedback ={name , email ,message,}
-  await contact.save();
+  const{
+    name,
+    email,
+    message,}=req.body;
+  const feedback ={name, email,message,}
+  await Contact.create(feedback);
   
       res.status(200).json({
         success : true,
