@@ -12,9 +12,10 @@ export const placeContact = asyncError(async(req,res,next)=>{
   
       res.status(200).json({
         success : true,
-        message :"Order placed successfully via COD"
+        message :"Thanks for writing to us"
     })
-})
+}
+)
 export const placeOrder= asyncError(async (req,res,next)=>{
     const {
         shippingInfo,
