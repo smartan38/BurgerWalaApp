@@ -10,7 +10,7 @@ export const placeContact = asyncError(async(req,res,next)=>{
     email : req.body.email,
     mesage : req.body.message})
   const feedback ={name , email ,message,}
-  await contact.create(feedback)
+  await contact.save();
   
       res.status(200).json({
         success : true,
