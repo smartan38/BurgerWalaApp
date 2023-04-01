@@ -1,6 +1,6 @@
   import { asyncError } from "../middlewares/errorMiddleware.js"
 import {Order } from "../models/order.js"
-import {Contact } from "../models/User.js"
+import {Contact } from "../models/order.js"
 import {Payment} from "../models/Payment.js"
 import ErrorHandler from "../utils/ErrorHandler.js";
 import {instance} from "../server.js"
