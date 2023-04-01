@@ -35,7 +35,7 @@ const schema1 = new mongoose.Schema({
     message : {
         type : String ,
         require : true,
-    }
+    },
 })
 
 export const Contact =mongoose.model("Contact",schema1)
