@@ -12,7 +12,7 @@ router.get("/googlelogin",passport.authenticate("google",{
 router.get("/login" , passport.authenticate("google" ,
                                             {
        
-    successRedirect : "https://frontend-gules-ten.vercel.app",
+    successRedirect : "https://frontend-gules-ten.vercel.app/",
 //      successRedirect : process.env.FRONTEND_URL,
 
 }
